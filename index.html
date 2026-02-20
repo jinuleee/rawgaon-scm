@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>로가온 SCM · Rawgaon</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Slack 색상 팔레트 */
+    --slack-purple: #4A154B;
+    --slack-purple-hover: #3b1240;
+    --slack-purple-active: rgba(255,255,255,0.16);
+    --slack-text-on-purple: #E8DEF8;
+    --slack-text-dim: rgba(255,255,255,0.56);
+    --slack-divider: rgba(255,255,255,0.13);
+
+    --bg-main: #FFFFFF;
+    --bg-body: #F8F8F8;
+    --text-primary: #1D1C1D;
+    --text-secondary: #616061;
+    --text-dim: #868686;
+    --border: #E8E8E8;
+    --border-focus: #4A154B;
+
+    --green: #2BAC76;
+    --yellow: #ECB22E;
+    --red: #E01E5A;
+    --blue: #1264A3;
+    --blue-light: #D9EAFF;
+
+    --success-bg: #DAFFD8;
+    --warning-bg: #FFF4CC;
+    --danger-bg: #FFE8EF;
+
+    --sidebar-width: 260px;
+    --topbar-h: 49px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Lato', 'Noto Sans KR', sans-serif;
+    background: var(--bg-body);
+    color: var(--text-primary);
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  /* ══════════════════════════════
+     사이드바 (Slack 스타일)
+  ══════════════════════════════ */
+  .sidebar {
+    width: var(--sidebar-width);
+    background: var(--slack-purple);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    flex-shrink: 0;
+    user-select: none;
+  }
+
+  /* 워크스페이스 헤더 */
+  .workspace-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    height: var(--topbar-h);
+    border-bottom: 1px solid var(--slack-divider);
+    cursor: pointer;
+    transition: background 0.1s;
+  }
+  .workspace-header:hover { background: var(--slack-purple-hover); }
+
+  .workspace-name {
+    font-size: 15px;
+    font-weight: 900;
+    color: #FFFFFF;
+    letter-spacing: -0.3px;
+  }
+
+  .workspace-chevron {
+    width: 20px; height: 20px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .workspace-chevron span { font-size: 10px; color: var(-slack-purple); font-weight: 900; }
